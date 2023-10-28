@@ -21,7 +21,6 @@ section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;}
 
@@ -42,7 +41,6 @@ blockquote, q {
 }
 
 	blockquote:before, blockquote:after, q:before, q:after {
-		content: '';
 		content: none;
 	}
 
@@ -99,10 +97,10 @@ input, select, textarea {
 
 	body, input, textarea, select {
 		font-family: 'Open Sans', sans-serif;
-		line-height: 1.85em;
+		line-height: 1.4em;
 		/* color: #888; */
 		font-weight: 300;
-		font-size: 13pt;
+		font-size: 11.5pt;
 	}
 
 	a {
@@ -282,6 +280,25 @@ input, select, textarea {
 
 		}
 
+/* Table-Row */
+	.table-row {
+		display: table-row;
+	}
+
+		.table-row > .img {
+			display: table-cell;
+			width: 9.5em;
+			/*align-items:center;*/
+			vertical-align:middle;
+			padding: 0.5em;
+		}
+
+		.table-row > .text {
+			display: table-cell;
+			vertical-align: top;
+			padding: 0.5em;
+		}
+
 /* Row */
 
 	.row {
@@ -328,7 +345,9 @@ input, select, textarea {
 		}
 
 		.row > .col-fixed {
-			width: 19em;
+			width: 9.5em;
+			display: flex;
+			align-items:center;
 		}
 
 		.row > .col-1 {
@@ -575,7 +594,9 @@ input, select, textarea {
 				}
 
 				.row > .col-fixed-xlarge {
-					width: 18em;
+					width: 9.5em;
+					display: flex;
+					align-items:center;
 				}
 
 				.row > .col-1-xlarge {
@@ -824,7 +845,9 @@ input, select, textarea {
 				}
 
 				.row > .col-fixed-large {
-					width: 17em;
+					width: 8.5em;
+					display: flex;
+					align-items:center;
 				}
 
 				.row > .col-1-large {
@@ -1319,7 +1342,9 @@ input, select, textarea {
 				}
 
 				.row > .col-fixed-small {
-					width: 16em;
+					width: 8em;
+					display: flex;
+					align-items:center;
 				}
 
 				.row > .col-1-small {
@@ -1942,16 +1967,9 @@ input, select, textarea {
 			}
 
 
-		.box.style2 h3 {
-			margin-bottom: 0.25em;
-		}
-
-
-		.box.style2 .image {
-			position: relative;
-			margin: 0em 0 0.5em 0em;
-			width: auto;
-			align-content: center;
+		.box.style2 {
+			width: 38em;
+			padding: 0.5em 0.5em 0.5em 0.5em;
 		}
 
 /* Icons */
@@ -2164,21 +2182,17 @@ input, select, textarea {
 		}
 
 		#pub p {
-			font-size: 1.5em;
-			line-height: 1.75em;
+			margin-bottom: 0.15em;
 		}
 
-			#pub p a {
-				color: inherit;
-			}
-
-	#act .row > .col-fixed {
-		width: 17.0em;
-	}
-
 		#act p {
-			font-size: 85%;
-			line-height: 1.5;
+			font-size: 90%;
+			margin-top: 0.2em;
+			margin-bottom: 0;
+		}
+
+		#act article {
+			margin: 0.5em;
 		}
 
 
@@ -2240,6 +2254,7 @@ input, select, textarea {
 
 			header {
 				margin: 0 0 2em 0;
+				text-align: center;
 			}
 
 		/* Wrappers */
@@ -2284,7 +2299,7 @@ input, select, textarea {
 			}
 
 			#pub {
-				text-align: center;
+				/* text-align: center; */
 				padding: 5em 0;
 			}
 
